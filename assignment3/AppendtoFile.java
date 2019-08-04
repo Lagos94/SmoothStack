@@ -12,7 +12,6 @@ public class AppendtoFile {
             String dirPath = "C:\\Users\\jose9\\Desktop\\";
             String file = "Test.txt";
             File directory = new File(dirPath);
-            File newFile = new File(file);
             File actualFile = new File(directory, file);
                 String absolute = actualFile.getAbsolutePath();
                 System.out.println("Original  path: " + actualFile.getPath());
