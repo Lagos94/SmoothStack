@@ -3,7 +3,7 @@ package assignment4.concurrency;
 class DCLocking {
     private static DCLocking instance;
 
-    private DCLocking() { //Restricted to this class itself.
+    private DCLocking() { //Constructor restricted to this class itself.
     }
 
     private static DCLocking getDCL() {
