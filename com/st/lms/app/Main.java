@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
-    private static List<Employee> createSmallCompany() {
-
+    public static void main(String[] args) {
         List<Employee> employees = createSmallCompany();
         //Max salary
         Employee empWithMaxSalary = employees
@@ -19,10 +18,11 @@ public class Main {
 
         //List employees whose Manager is Julie
 
-        List<Employee> empWithMgr = employees
-                .stream()
-                .filter(e -> e.getManagerId() != null && e.getManagerId() == 3)
-                .collect(Collectors.toList());
+        List<Employee> empWithMgr =
+                employees
+                        .stream()
+                        .filter(e -> e.getManagerId() != null && e.getManagerId() == 3)
+                        .collect(Collectors.toList());
         String result = empWithMgr
                 .stream()
                 .map(e -> e.getName())
@@ -35,7 +35,10 @@ public class Main {
         employees
                 .stream()
                 .filter(e -> e.getManagerId() == null) // There is an issue here we need to add to address
-        .forEach(e -> System.out.println(e.getName()));
+                .forEach(e -> System.out.println(e.getName()));
+    }
+
+        private static List<Employee> createSmallCompany(){
 
         Department technologyDept = new Department();
         technologyDept.setId(1);
@@ -49,7 +52,7 @@ public class Main {
         payrollDept.setId(3);
         payrollDept.setDepartmentName("Payroll");
 
-        List<Employee> employee = new ArrayList<Employee>();
+        List<Employee> employees = new ArrayList<>();
 
         employees.add(new Employee(1, "Tom", 200000, null, hrDept));
         employees.add(new Employee(2, "Joe", 95000, 1, hrDept));

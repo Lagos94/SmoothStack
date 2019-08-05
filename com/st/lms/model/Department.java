@@ -9,7 +9,6 @@ public class Department {
     public int getId() {
         return id;
     }
-
     public String getDepartmentName() {
         return departmentName;
     }
@@ -17,7 +16,6 @@ public class Department {
     public void setId(int id) {
         this.id = id;
     }
-
     public void setDepartmentName(String departmentName) {
         this.departmentName = departmentName;
     }
